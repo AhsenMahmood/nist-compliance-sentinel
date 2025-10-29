@@ -204,13 +204,13 @@ class NISTOutputValidator:
         print("="*70 + "\n")
         
         if self.errors:
-            print("❌ VALIDATION FAILED - Please fix errors above\n")
+            print("VALIDATION FAILED - Please fix errors above\n")
             return {"status": "failed", "errors": len(self.errors)}
         elif self.warnings:
             print("⚠ VALIDATION PASSED WITH WARNINGS\n")
             return {"status": "passed_with_warnings", "warnings": len(self.warnings)}
         else:
-            print("✅ VALIDATION PASSED - All checks successful!\n")
+            print("VALIDATION PASSED - All checks successful!\n")
             return {"status": "passed"}
 
 
