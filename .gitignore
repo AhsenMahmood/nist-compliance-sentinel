@@ -1,11 +1,6 @@
-.env
+﻿.env
+outputs/
+.vscode/
 __pycache__/
 *.pyc
-*.pyo
-*.pyd
-.Python
-env/
-venv/
-outputs/*.md
 .DS_Store
-*.log
