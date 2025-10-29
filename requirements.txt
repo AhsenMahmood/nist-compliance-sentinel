@@ -1,0 +1,8 @@
+openai>=1.0.0
+httpx>=0.24.1
+PyGithub>=1.59
+python-dotenv>=0.21.0
+requests==2.31.0
+beautifulsoup4==4.12.3
+markdownify==0.11.6
+lxml==5.1.0

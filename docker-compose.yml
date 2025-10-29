@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  nist-agent:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: nist-compliance-agent
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - GITHUB_TOKEN=${GITHUB_TOKEN}
+      - GITHUB_REPO=${GITHUB_REPO}
+    volumes:
+      - ./outputs:/app/outputs
+    restart: on-failure
+    healthcheck:
+      test: ["CMD-SHELL", "test -f /app/ready || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
